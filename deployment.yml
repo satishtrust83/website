@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: capstoneproject2-deployment
+  labels:
+    app: capstonewebapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: capstonewebapp
+  template:
+    metadata:
+      labels:
+        app: capstonewebapp
+    spec:
+      containers:
+      - name: capstonewebapp
+        image: satishtrust83/capstoneproj2img
+        ports:
+        - containerPort: 80
+          name: capstone-web-port
