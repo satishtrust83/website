@@ -19,4 +19,4 @@ spec:
         image: satishtrust83/capstoneproj2img
         ports:
         - containerPort: 80
-          name: capstone-web-port
+          name: webport
